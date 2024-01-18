@@ -1,0 +1,303 @@
+<!DOCTYPE html>
+<html lang="fa">
+<head>
+    <meta charset="utf-8">
+    <title>تهران تک</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+              border-radius: 15px;
+        }
+
+
+        body {
+            font-family: 'Vazir';
+            background-color: white;
+        }
+
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+
+        .header {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 20px;
+            background-color: #3f3f95;
+        }
+
+
+        .logo img {
+            width: 300px;
+            height: 75px;
+        }
+
+
+        .menu {
+            display: flex;
+            list-style: none;
+        }
+
+
+        .menu li {
+            margin: 0 10px;
+        }
+
+
+        .menu a {
+            display: block;
+            padding: 10px;
+            color: white;
+            text-decoration: none;
+            font-size: 18px;
+        }
+
+
+        .menu a:hover {
+            background-color: #0077cc;
+        }
+
+
+        .slider {
+            position: relative;
+            height: 300px;
+            width: 100%;
+            overflow: hidden;
+        }
+
+
+        .slide {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100px;
+            height: 100px;
+            opacity: 0;
+            transition: opacity 1s ease;
+        }
+
+
+        .slide.active {
+            opacity: 1;
+        }
+
+
+        .slide img {
+            width: 400px;
+            height: 400px;
+            object-fit: cover;
+            border-radius: 15px;
+        }
+
+
+        .slide-btn {
+            cursor: pointer;
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+            padding: 16px;
+            color: white;
+            font-weight: bold;
+            background-color: rgba(0, 0, 0, 0.5);
+            border: none;
+            z-index: 99;
+            border-radius: 40px;
+        }
+
+
+        .prev {
+            left: 10px;
+        }
+
+
+        .next {
+            right: 870px;
+        }
+
+
+        .intro h1 {
+            font-family: 'Vazir';
+            font-size: 15px;
+           background-color: #3f3f95;
+            color: #ffffff;
+            margin-bottom: 20px;
+            text-align: center;
+        }
+    .intro h3{
+        text-align: left;
+    }
+    .intro h4{
+        font-size: 20px;
+        line-height: 1.5;
+        text-align: center;
+    }
+        .intro h6{
+            color: #ffffff;
+        }
+
+        .contact-info-container {
+            position: relative;
+            display: inline-block;
+        }
+        .contact-info {
+            display: none; 
+            position: absolute;
+            left: 0;
+            right: 0;
+            color: #3f3f95;
+            background-color: #ffffff;
+            padding: 15px;
+            border-radius: 10px;
+            margin-top: 5px;
+            text-align: center;
+            z-index: 1; 
+            border: 3px solid black;
+        }
+
+        .products {
+            padding: 40px;
+            text-align: center;
+        }
+
+
+        .products h2 {
+            font-size: 30px;
+            margin-bottom: 20px;
+        }
+
+
+        .products ul {
+            list-style: none;
+            padding: 0;
+        }
+
+
+        .products li {
+            margin-bottom: 10px;
+        }
+
+
+        .products a {
+            font-size: 20px;
+            text-decoration: none;
+            color: #0099ff;
+        }
+
+
+        .products a:hover {
+            text-decoration: underline;
+        }
+
+
+        footer {
+            background-color: #aaaaaa;
+           color: #3f3f95;
+            font-family: 'IranNastaliq';
+            padding: 20px;
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <div class="logo"><a href="#container"><img src="icon 2.jpg" alt="لوگو"></a></div>
+            <ul class="menu">
+                <li><a href="#container">خانه</a></li>
+                <li><a href="#footer">درباره ما</a></li>
+                <li><a href="javascript:void(0);" onclick="scrollToElement('products')">محصولات</a></li>
+                <li id="contact-info-container">
+                    <a href="javascript:void(0);" onmouseover="showContactInfo()" onmouseout="hideContactInfo()">تماس با ما</a>
+                    <div id="contact-info" class="contact-info">
+                        <p>شماره تماس : 02155618790 . 09124482980_09126830365</p>
+                        <p>آدرس ما: میدان شوش . خیابان شوش غربی . قبل سه راه خیام . روبه روی مترو شوش . پلاک 293</p>
+                    </div>
+                </li>
+            </div>
+        </div>
+        <h3>Hvi</h3>
+        <img src="مترو.jpg" width="500" height="350">
+        </div>
+        <div class="slider">
+            <div class="slide active">
+                <img src="4.jpg" alt="اسلاید ۱">
+            </div>
+            <div class="slide">
+                <img src="2.jpg" alt="اسلاید ۲">
+            </div>
+            <div class="slide">
+                <img src="3.jpg" alt="اسلاید ۳">
+            </div>
+            <button class="slide-btn prev" onclick="prevSlide()">&#10094;</button>
+            <button class="slide-btn next" onclick="nextSlide()">&#10095;</button>
+         </div>
+        <div class="intro">
+          <h6> <p>pp</p></h6>
+          <h6> <p>pp</p></h6>
+          <h6> <p>pp</p></h6>
+            <h1>صنعت چادر دوزی یکی از صنایع دستی است که در بسیاری از مناطق جهان وجود دارد. این صنعت به تولید چادرهای سنتی و زیبا با استفاده از دستگاه های دوزندگی و نخ های مختلف مشغول است. چادرهای دوزی شده معمولاً با الگوها و طرح های مختلف تزئین شده اند و برای استفاده در مراسم ها، جشن ها، توریست ها و حتی به عنوان قطعات تزئینی در خانه ها استفاده می شوند.
+
+                صنعت چادر دوزی به عنوان یک فرصت برای کسب درآمد برای زنان و خانواده های روستایی در بسیاری از کشورها شناخته شده است. این صنعت به آنان اجازه میدهد تا با استفاده از مهارت های خود، درآمد خود را افزایش داده و به توسعه اقتصاد خود کمک کنند.</h1>
+            <h4>...</h4>
+        </div>
+        <div class="products" id="products">
+            <h2>محصولات ما</h2>
+            <h2>...</h2>
+            <div >
+                <img src="3.jpg" width="300" height="300" alt="اسلاید ۳">
+            </div>
+        </div>
+    </div>
+    <footer id="footer">
+        <p>به نام خدا</p>
+        <p>تیم تهران تک از حدود بیست سال پیش فعالیت خود را در زمینه چادردوزی و خدمات در زمینه پارچه های برزتی و مشمع شروع کرده است و تاکنون جز بهترین و محبوب تریین گروه ها در این زمینه بوده است و امیدوار است که با اصلاح و پیشرفت و ارتقا خود باعث رضایتمندی بیشتر مشتریان عزیز این مجموعه شود ارادتمندیم </p>
+        <p>مدیریت مجموعه تهران تک</p>
+    </footer>
+    <script>
+        function showContactInfo() {
+            document.getElementById('contact-info').style.display = 'block';
+        }
+
+        function hideContactInfo() {
+            document.getElementById('contact-info').style.display = 'none';
+        }
+            function scrollToElement(elementId) {
+            document.getElementById(elementId).scrollIntoView({
+                behavior: 'smooth'
+            });
+        }
+        
+        let slides = document.querySelectorAll('.slide');
+        let index = 0;
+
+        showSlide(index);
+
+        function showSlide(n) {
+            n = n % slides.length;
+            slides.forEach(slide => {
+                slide.classList.remove('active');
+                slide.style.display = 'none';
+            });
+            slides[n].classList.add('active');
+            slides[n].style.display = 'block';
+        }
+
+        function nextSlide() {
+            index = (index + 1) % slides.length;
+            showSlide(index);
+        }
+
+        function prevSlide() {
+            index = (index - 1 + slides.length) % slides.length;
+            showSlide(index);
+        }
+        setInterval(nextSlide, 9000);
+    </script>
+</body>
+</html>
